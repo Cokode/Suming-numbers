@@ -1,0 +1,26 @@
+Hello this is another neat way of solving the same problem using While loops. On the first project we used the  If Statements. 
+
+public class DigitSumChallenge {
+    public static int ERROR_MESSAGE = -1;
+
+    public static int sumDigits(int number) {
+
+        if (number < 10) {
+            return ERROR_MESSAGE;
+        }
+     
+
+        int sum = 0;
+        while (number > 0) {
+
+            int digits = number % 10;
+            sum += digits;
+            number /= 10;
+        }
+        return sum;
+    }
+
+    public static void main(String[] args) {
+        System.out.println(sumDigits(2222227));
+    }
+}
